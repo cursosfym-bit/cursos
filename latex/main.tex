@@ -1,0 +1,1068 @@
+\documentclass[12pt,letterpaper]{article}
+
+% ------------------------------------------------
+% PAQUETES
+% ------------------------------------------------
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage[spanish,es-nodecimaldot]{babel}
+\usepackage{geometry}
+\usepackage{array}
+\usepackage{longtable}
+\usepackage{booktabs}
+\usepackage{tabularx}
+\usepackage{enumitem}
+\usepackage{xcolor}
+\usepackage{hyperref}
+\usepackage{amsmath,amssymb}
+\usepackage{listings}
+\usepackage{graphicx}
+\usepackage{float}
+
+\geometry{
+    left=2.2cm,
+    right=2.2cm,
+    top=2.2cm,
+    bottom=2.2cm
+}
+
+% ------------------------------------------------
+% CONFIGURACIÓN DE HIPERVÍNCULOS
+% ------------------------------------------------
+\hypersetup{
+    colorlinks=true,
+    linkcolor=blue,
+    citecolor=blue,
+    urlcolor=blue,
+    pdftitle={Programa de sesiones: Taller de Herramientas Computacionales},
+    pdfauthor={Athziri Hernádnez Jiménez}
+}
+
+% ------------------------------------------------
+% CONFIGURACIÓN PARA CÓDIGO PYTHON
+% ------------------------------------------------
+\definecolor{codegray}{RGB}{245,245,245}
+\definecolor{codegreen}{RGB}{0,120,80}
+\definecolor{codeblue}{RGB}{0,70,150}
+
+\lstset{
+    language=Python,
+    backgroundcolor=\color{codegray},
+    basicstyle=\ttfamily\small,
+    keywordstyle=\color{codeblue}\bfseries,
+    commentstyle=\color{codegreen},
+    stringstyle=\color{red},
+    frame=single,
+    breaklines=true,
+    showstringspaces=false
+}
+
+% ------------------------------------------------
+% COMANDOS PERSONALIZADOS
+% ------------------------------------------------
+\newcommand{\python}{\texttt{Python}}
+\newcommand{\latexname}{\LaTeX}
+\newcommand{\colab}{\textit{Google Colab}}
+\newcommand{\vscode}{\textit{Visual Studio Code}}
+\newcommand{\github}{\textit{GitHub}}
+\newcommand{\overleaf}{\textit{Overleaf}}
+
+\begin{document}
+
+% ------------------------------------------------
+% PORTADA
+% ------------------------------------------------
+\begin{titlepage}
+\centering
+
+{\scshape\LARGE Programa de sesiones de clase\par}
+
+\vspace{1cm}
+
+{\Huge\bfseries Taller de Herramientas Computacionales\par}
+
+\vspace{0.5cm}
+
+{\Large Propuesta de organización didáctica para estudiantes de primer semestre de licenciatura de Matemáticas Aplicadas.}
+\\[3ex]
+{\large \textbf{Athziri Hernández Jiménez}}
+
+\vfill
+
+\begin{tabular}{|ll|} \hline
+\textbf{Duración total:} & 64 horas \\
+\textbf{Número de sesiones:} & 32 sesiones \\
+\textbf{Duración por sesión:} & 2 horas \\
+\textbf{Modalidad:} & Teórico-práctica \\
+\textbf{Herramientas principales:} &
+\python, \colab, \vscode,\\ & \github, \latexname\ y \overleaf\\ \hline 
+\end{tabular}
+
+\vfill
+
+\end{titlepage}
+
+\tableofcontents
+\newpage
+
+% ==================================================
+\section{Presentación del programa}
+
+El presente programa propone una organización progresiva de las sesiones
+del curso \textit{Taller de Herramientas Computacionales}, dirigida a
+estudiantes de primer semestre de licenciatura en Matemáticas Aplicadas.
+
+La propuesta parte del supuesto de que los estudiantes poseen niveles
+heterogéneos de experiencia previa con computadoras y programación.
+La secuencia inicia con actividades de familiarización
+con el entorno de trabajo y resolución de problemas sencillos, posteriormente avanzar hacia la programación estructurada, el manejo de
+datos, la representación gráfica, el cálculo simbólico, aplicaciones
+matemáticas y computacionales, a la vez, la elaboración de documentos científicos mediante \latexname. 
+
+Durante el curso se pretenden utilizar cuatro entornos principales:
+
+\begin{itemize}
+    \item \textbf{\colab:} para introducir la programación sin requerir
+    instalación local y facilitar el trabajo mediante cuadernos interactivos.
+    
+    \item \textbf{\vscode:} para introducir gradualmente el trabajo con
+    archivos de código, scripts, organización de proyectos y ejecución
+    local de programas.
+    
+    \item \textbf{\github:} para introducir principios básicos de control
+    de versiones, documentación de proyectos y trabajo reproducible.
+    
+    \item \textbf{\overleaf:} para la elaboración colaborativa de documentos,
+    reportes técnicos, fórmulas matemáticas, tablas, figuras y presentaciones.
+\end{itemize}
+
+% ==================================================
+\section{Objetivo general}
+
+Introducir al estudiante en el uso informado de herramientas
+computacionales para resolver, analizar y comunicar problemas
+matemáticos y científicos, mediante el aprendizaje progresivo de
+programación en \python, el desarrollo de aplicaciones y experimentos
+computacionales, el uso básico de control de versiones con \github\ y
+la elaboración de documentos técnicos y científicos mediante
+\latexname.
+
+% ==================================================
+\section{Objetivos específicos}
+
+Al finalizar el curso, se espera que el estudiante sea capaz de:
+
+\begin{enumerate}[noitemsep]
+    \item Reconocer los elementos básicos de un lenguaje de programación.
+    
+    \item Resolver problemas sencillos mediante algoritmos y programas
+    escritos en \python.
+    
+    \item Utilizar variables, tipos de datos, funciones, estructuras
+    condicionales, ciclos, vectores y matrices.
+    
+    \item Manipular y visualizar datos mediante herramientas
+    computacionales.
+    
+    \item Representar gráficamente funciones y resultados numéricos.
+    
+    \item Utilizar herramientas básicas de cálculo simbólico.
+    
+    \item Aplicar métodos computacionales a problemas matemáticos,
+    geométricos y científicos.
+    
+    \item Reconocer la importancia de los errores numéricos, el redondeo
+    y la precisión computacional.
+    
+    \item Generar y utilizar números aleatorios en simulaciones sencillas.
+    
+    \item Utilizar \github\ como herramienta básica para almacenar,
+    organizar y versionar proyectos.
+    
+    \item Elaborar documentos académicos y científicos utilizando
+    \latexname\ en \overleaf.
+    
+    \item Integrar programación y documentación en un proyecto final.
+\end{enumerate}
+
+% ==================================================
+\section{Organización general del curso}
+
+El curso se organiza en cuatro bloques principales.
+\begin{tabular}{lll}
+\toprule
+\textbf{Bloque} & \textbf{Temática principal} & \\
+\midrule
+I & Introducción a la programación y pensamiento computacional &  \\
+II & Aplicaciones, visualización y experimentación computacional & \\
+III & Introducción a Linux y \github &  \\
+IV & Introducción a \latexname\ y comunicación científica & \\
+\bottomrule
+\end{tabular}
+
+
+% ==================================================
+\section{Estructura sugerida de una sesión de dos horas}
+
+La estructura puede modificarse dependiendo de la complejidad del tema,
+pero se propone la siguiente organización general:
+
+\begin{table}[H]
+\centering
+\begin{tabular}{p{4.5cm}p{2cm}p{9cm}}
+\toprule
+\textbf{Actividad} & \textbf{Tiempo} & \textbf{Propósito} \\
+\midrule
+Inicio y recuperación de conocimientos & 10 min &
+Relacionar el tema con conocimientos previos y presentar el problema. \\
+
+Introducción conceptual & 20--25 min &
+Explicar los conceptos fundamentales mediante ejemplos breves. \\
+
+Demostración guiada & 20--25 min &
+Mostrar el procedimiento de programación o uso de la herramienta. \\
+
+Actividad práctica & 35--45 min &
+Resolver ejercicios individuales o en parejas. \\
+
+Discusión y revisión & 10--15 min &
+Analizar resultados, errores y estrategias de solución. \\
+
+Cierre & 5 min &
+Recuperar los conceptos centrales y presentar la actividad siguiente. \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+% ==================================================
+\section{Programa de sesiones}
+%--------------SESIONES------------------
+{\Large{\textbf{Lista de sesiones}}}
+
+\begin{itemize}
+    \item Sesión 1. Presentación del curso.
+\item Sesión 2. Introducción al pensamiento computacional y primer contacto con Python. Variables y tipos de datos.
+ \item Sesión 3.Entrada y salida de información.
+ \item Sesión 4. Funciones básicas y organización del código. Estructuras condicionales.
+ \item Sesión 5. Ciclos y repetición controlada. 
+ \item Sesión 6. Listas y manejo básico de colecciones de datos.
+  \item Sesión 7 Práctica integradora previa a la primera evaluación: resolución de problemas utilizando variables, condicionales, ciclos, listas y funciones.
+\item Sesión 8. \textbf{ Primera Evaluación: Fundamentos de programación y fundamentos de LaTeX: primer texto.}
+%-------------------------------------
+\item Sesión 9. Arreglos numéricos con NumPy y operaciones vectorizadas.
+ \item Sesión 10. Matrices y arreglos bidimensionales.
+ \item Sesión 11. Recursiones
+ \item Sesión 12. Cálculo simbólico con SymPy.
+ \item Sesión 13. Resolución numérica y gráfica de problemas: raíces y ecuaciones.
+ \item Sesión 14. Graficación de funciones. Graficación y visualización de datos y funciones con Matplotlib.
+ \item Sesión 15. Errores numéricos, precisión y redondeo.
+ \item Sesión 16. Números aleatorios y simulación.
+ \item Sesión 17. Representación geométrica y transformaciones en 2D y 3D; Fractales y construcción del Triángulo de Sierpinski. {\textcolor{purple}{Temas comodín}}
+
+\item Sesión 18. Práctica integradora previo a la segunda evaluación: modelación, análisis y visualización de un problema matemático o científico.
+
+\item Sesión 19: \textbf{ Segunda evaluación: aplicación de herramientas computacionales para el análisis y resolución de problemas. LaTeX: modo matemático.}
+%-----------------------------------------
+ \item Sesión 20. Introducción a Linux y GitHub: repositorios, archivos y organización de proyectos. Control de versiones y organización de proyectos con GitHub.
+
+ %--------------LATEX---------------
+ \item Sesión 1. Introducción a LaTeX y Overleaf. Estructura y formato de documentos en LaTeX.
+ \item Sesión 2. Listas, tablas y organización de resultados.
+ \item Sesión 3. Figuras, gráficas y referencias cruzadas.
+ \item Sesión 4. Escritura de expresiones matemáticas en LaTeX.
+  \item Sesión 5. Teoremas, Corolarios, demostraciones, etc.
+ \item Sesión 6. Referencias bibliográficas y citas.
+ \item Sesión 7. Presentación con Beamer.
+
+ 
+ \item Sesión Final. Proyecto de aplicación computacional.
+
+\end{itemize}
+
+\begin{tabular}{lll} \toprule
+\textbf{Calendario}&\textbf{Python} & \textbf{\LaTeX} \\ \midrule
+\textbf{Septiembre} &8,22,29 & 3,10,17,24\\ \hline
+\textbf{Octubre} & 6,13,15,27 & 1,8, 29\\\hline
+\textbf{1era. Evaluación:}& 20 y 22 &\\ \hline 
+\textbf{Noviembre} & 3, 5, 10, 12, 17, 19, 24 y 26&\\ \hline
+\textbf{Diciembre: 2da. Evaluación:} & 1 y 4 & \\\hline
+\textbf{Diciembre: Linux y GitHub}& 8 y 9 &\\ \hline 
+\textbf{Enero: Exposiciones proyecto final}& 4, 9, 11 y 16&\\ \hline 
+\end{tabular}
+\\
+
+% --------------------------------------------------
+\subsection{Bloque I. Introducción a Python y pensamiento computacional}
+
+% --------------------------------------------------
+\subsubsection*{Sesión 1. Presentación del curso y evaluación de conocimientos generales}
+
+\textbf{Temática:}
+\begin{itemize}[noitemsep]
+    \item Presentación de la asignatura.
+    \item Realización de un cuestionario evaluando los conocimientos generales de los alumnos.   
+\end{itemize}
+
+\textbf{Objetivo de la sesión:}
+
+Conocer el estado de conocimiento sobre programación de los alumnos. 
+
+
+\subsubsection*{Sesión 2a. Introducción al pensamiento computacional y primer contacto con Python.}
+
+\textbf{Temática:}
+\begin{itemize}[noitemsep]
+    \item Presentación de la asignatura.
+    \item ¿Qué es un algoritmo?
+    \item ¿Qué es un lenguaje de programación?
+    \item Primer contacto con \python\ mediante \colab.
+\end{itemize}
+
+\textbf{Objetivo de la sesión:}
+
+Que el estudiante reconozca la relación entre un problema, un algoritmo
+y un programa, y ejecute sus primeras instrucciones en \python.\\
+
+\textbf{Ejercicios:}
+\begin{enumerate}[noitemsep]
+    \item Escribir un algoritmo para preparar una bebida, sandwich, pasta, etc.
+    \item Identificar instrucciones ambiguas.
+    \item Ejecutar un programa que calcule operaciones aritméticas.
+\end{enumerate}
+
+% --------------------------------------------------
+\subsubsection*{Sesión 2b. Variables y tipos de datos}
+
+\textbf{Temática:}
+\begin{itemize}[noitemsep]
+    \item Variables.
+    \item Números enteros y reales.
+    \item Cadenas de texto.
+    \item Operadores aritméticos.
+    \item Asignación.
+\end{itemize}
+
+\textbf{Ejercicios:}
+\begin{enumerate}[noitemsep]
+    \item Calcular el área de un rectángulo.
+    \item Calcular el perímetro de un círculo.
+    \item Convertir una temperatura de grados Celsius a Fahrenheit.
+    \item Calcular la distancia recorrida en un movimiento con velocidad
+    constante.
+\end{enumerate}
+
+\textbf{Actividad práctica integradora:}
+
+Construir un programa que reciba valores definidos por el usuario y
+calcule una cantidad física o matemática sencilla.
+
+% --------------------------------------------------
+\subsubsection*{Sesión 3. Entrada y salida de información}
+
+\textbf{Temática:}
+\begin{itemize}[noitemsep]
+    \item Función \texttt{input()}.
+    \item Conversión de tipos.
+    \item Salida de información.
+    \item Formato de resultados.
+\end{itemize}
+
+\textbf{Ejercicios:}
+\begin{enumerate}[noitemsep]
+    \item Calculadora de índice de masa corporal.
+    \item Conversor de unidades.
+    \item Cálculo del promedio de tres calificaciones.
+    \item Cálculo de la ecuación de movimiento rectilíneo uniforme.
+\end{enumerate}
+
+% --------------------------------------------------
+\subsubsection*{Sesión 4a. Funciones básicas y organización del código}
+
+\textbf{Temática:}
+\begin{itemize}[noitemsep]
+    \item Funciones matemáticas.
+    \item Importación de módulos.
+    \item Funciones definidas por el usuario.
+    \item Parámetros y valores de retorno.
+\end{itemize}
+
+\textbf{Ejercicios:}
+\begin{enumerate}[noitemsep]
+    \item Crear una función para calcular el área de un triángulo.
+    \item Crear una función para convertir kilómetros a metros.
+    \item Crear una función para calcular la velocidad media.
+    \item Crear una función que determine si un número es positivo,
+    negativo o cero.
+\end{enumerate}
+
+% --------------------------------------------------
+\subsubsection*{Sesión 4b. Estructuras condicionales}
+
+\textbf{Temática:}
+\begin{itemize}[noitemsep]
+    \item Expresiones booleanas.
+    \item Operadores relacionales.
+    \item \texttt{if}.
+    \item \texttt{if-else}.
+    \item \texttt{if-elif-else}.
+\end{itemize}
+\textbf{Ejercicios:}
+\begin{enumerate}[noitemsep]
+    \item Determinar si un número es par o impar.
+    \item Determinar el mayor de dos números.
+    \item Clasificar una temperatura como baja, media o alta.
+    \item Resolver un problema de tarifa con diferentes condiciones.
+\end{enumerate}
+
+% --------------------------------------------------
+\subsubsection*{Sesión 5. Ciclos: repetición controlada}
+
+\textbf{Temática:}
+\begin{itemize}[noitemsep]
+    \item Concepto de iteración.
+    \item Ciclo \texttt{for}.
+    \item Función \texttt{range()}.
+    \item Ciclo \texttt{while}.
+    \item Variables acumuladoras.
+    \item Contadores.
+    \item Condicionales dentro de ciclos.
+    \item Diseño de algoritmos.
+\end{itemize}
+
+\textbf{Ejercicios:}
+\begin{enumerate}[noitemsep]
+    \item Mostrar los números del 1 al 100.
+    \item Calcular la suma de los primeros $n$ números.
+    \item Generar una tabla de multiplicar.
+    \item Aproximar la suma de una serie matemática.
+    \item Desarrollar una versión simple de un programa de análisis de calificaciones.
+\end{enumerate}
+
+% --------------------------------------------------
+\subsubsection*{Sesión 6. Listas y manejo básico de colecciones de datos}
+
+\textbf{Temática:}
+\begin{itemize}[noitemsep]
+    \item Listas.
+    \item Índices.
+    \item Acceso y modificación de elementos.
+    \item Recorrido de listas.
+\end{itemize}
+
+\textbf{Ejercicios:}
+\begin{enumerate}[noitemsep]
+    \item Calcular el máximo y mínimo de una lista.
+    \item Calcular el promedio de una lista.
+    \item Contar cuántos valores cumplen una condición.
+    \item Construir una lista de cuadrados de números.
+\end{enumerate}
+
+% --------------------------------------------------
+\subsubsection*{Sesión 7. Práctica Integradora}
+%---------------------------------------------------
+\subsubsection*{Sesión 8. Primera Evaluación}
+%----------------------------------------------------
+\subsubsection*{Sesión 9. Arreglos numéricos con NumPy y operaciones vectorizadas}
+
+\textbf{Temática:}
+\begin{itemize}[noitemsep]
+    \item Introducción a NumPy.
+    \item Arreglos unidimensionales.
+    \item Operaciones vectorizadas.
+    \item Generación de secuencias numéricas.
+\end{itemize}
+
+\textbf{Ejercicios:}
+
+Generar valores de posición para:
+\begin{enumerate}[noitemsep]
+    \item Movimiento rectilíneo uniforme.
+    \item Caída libre ideal.
+    \item Movimiento con aceleración constante.
+\end{enumerate}
+
+% --------------------------------------------------
+\subsubsection*{Sesión 10. Matrices y arreglos bidimensionales}
+
+\textbf{Temática:}
+\begin{itemize}[noitemsep]
+    \item Matrices.
+    \item Dimensiones.
+    \item Índices.
+    \item Operaciones básicas.
+    \item Producto matricial.
+\end{itemize}
+
+\textbf{Ejercicios:}
+\begin{enumerate}[noitemsep]
+    \item Crear matrices de diferentes dimensiones.
+    \item Calcular la suma de dos matrices.
+    \item Calcular el producto de una matriz por un escalar.
+    \item Explorar una transformación lineal sencilla.
+\end{enumerate}
+
+% --------------------------------------------------
+\subsubsection*{Sesión 11a. Funciones, modularidad y reutilización}
+
+\textbf{Temática:}
+\begin{itemize}[noitemsep]
+    \item Diseño de funciones.
+    \item Separación de problemas.
+    \item Reutilización de código.
+    \item Pruebas básicas.
+\end{itemize}
+
+\textbf{Ejercicios:}
+
+Desarrollar una pequeña biblioteca de funciones para:
+
+\begin{itemize}[noitemsep]
+    \item Conversión de unidades.
+    \item Áreas y perímetros.
+    \item Velocidad y aceleración media.
+    \item Operaciones estadísticas sencillas.
+\end{itemize}
+%--------------------------------------------------
+\subsubsection*{Sesión 11b. Ceros de una función y raíces de polinomios}
+
+\textbf{Temática:}
+\begin{itemize}[noitemsep]
+    \item Interpretación gráfica de una raíz.
+    \item Raíces de polinomios.
+    \item Métodos numéricos sencillos.
+    \item Comparación entre resultados simbólicos y numéricos.
+\end{itemize}
+
+\textbf{Ejercicios:}
+\begin{enumerate}[noitemsep]
+    \item Encontrar las raíces de un polinomio cuadrático.
+    \item Explorar polinomios de mayor grado.
+    \item Graficar la función e identificar sus ceros.
+    \item Comparar una solución gráfica, simbólica y numérica.
+\end{enumerate}
+
+% --------------------------------------------------
+\subsubsection*{Sesión 11c. Recursión}
+
+\textbf{Temática:}
+\begin{itemize}[noitemsep]
+    \item Concepto de recursión.
+    \item Caso base.
+    \item Llamada recursiva.
+\end{itemize}
+
+\textbf{Ejercicios:}
+\begin{enumerate}[noitemsep]
+    \item Factorial.
+    \item Sucesión de Fibonacci.
+    \item Suma de los primeros $n$ enteros.
+    \item Comparar una solución iterativa con una recursiva.
+\end{enumerate}
+
+% --------------------------------------------------
+\subsubsection*{Sesión 12. Cálculo simbólico con SymPy}
+
+\textbf{Temática:}
+\begin{itemize}[noitemsep]
+    \item Introducción a SymPy.
+    \item Variables simbólicas.
+    \item Simplificación.
+    \item Derivación.
+    \item Integración.
+    \item Resolución de ecuaciones sencillas.
+\end{itemize}
+
+
+
+\textbf{Ejercicios:}
+
+Resolver simbólicamente y verificar numéricamente problemas elementales de cálculo.
+
+
+% ==================================================
+\subsection{Bloque II. Aplicaciones y experimentación computacional}
+
+% --------------------------------------------------
+\subsubsection*{Sesión 14. Graficación de funciones, Visualización de datos y funciones con Matplotlib}
+
+\textbf{Temática:}
+\begin{itemize}[noitemsep]
+    \item Introducción a Matplotlib.
+    \item Gráficas de funciones.
+    \item Ejes, etiquetas y leyendas.
+\end{itemize}
+
+\textbf{Actividad práctica:}
+
+Representar gráficamente diferentes funciones y analizar cómo cambian sus gráficas al modificar parámetros.
+
+% --------------------------------------------------
+\subsubsection*{Sesión 15. Errores numéricos, precisión y redondeo.}
+
+\textbf{Temática:}
+\begin{itemize}[noitemsep]
+    \item Precisión finita.
+    \item Error absoluto.
+    \item Error relativo.
+    \item Propagación básica de errores.
+    \item Problemas asociados al redondeo.
+\end{itemize}
+
+\textbf{Ejercicios:}
+\begin{enumerate}[noitemsep]
+    \item Comparar aproximaciones de $\pi$.
+    \item Analizar el error al redondear valores.
+    \item Comparar diferentes representaciones numéricas.
+    \item Analizar la diferencia entre dos expresiones matemáticamente
+    equivalentes.
+\end{enumerate}
+
+% --------------------------------------------------
+\subsubsection*{Sesión 16. Números aleatorios y simulación}
+
+\textbf{Temática:}
+\begin{itemize}[noitemsep]
+    \item Generación de números aleatorios.
+    \item Distribuciones básicas.
+    \item Simulación computacional.
+\end{itemize}
+
+\textbf{Ejercicio:}
+
+Realizar una estimación de una cantidad mediante simulación de Monte Carlo sencilla.
+%--------------------------------------------
+\subsubsection*{Sesión 17a. Representación geométrica de transformaciones en 2D, {\textcolor{purple}{Optativo}}}
+
+\textbf{Temática:}
+\begin{itemize}[noitemsep]
+    \item Vectores en el plano.
+    \item Transformaciones lineales.
+    \item Escalamiento.
+    \item Rotación.
+    \item Reflexión.
+\end{itemize}
+
+\textbf{Ejercicio:}
+
+Representar una figura geométrica y aplicar una matriz de transformación para observar sus cambios.
+
+% --------------------------------------------------
+\subsubsection*{Sesión 17b. Transformaciones en 3D. {\textcolor{purple}{Optativo}}}
+
+\textbf{Temática:}
+\begin{itemize}[noitemsep]
+    \item Coordenadas tridimensionales.
+    \item Representación de superficies.
+    \item Transformaciones geométricas.
+\end{itemize}
+
+\textbf{Ejercicios:}
+\begin{enumerate}[noitemsep]
+    \item Graficar una superficie sencilla.
+    \item Representar un paraboloide.
+    \item Explorar una esfera.
+    \item Aplicar una transformación a un conjunto de puntos.
+\end{enumerate}
+
+% --------------------------------------------------
+\subsubsection*{Sesión 17c. Fractales y el Triángulo de Sierpinski, {\textcolor{purple}{Optativo}}}
+
+\textbf{Temática:}
+\begin{itemize}[noitemsep]
+    \item Autosimilitud.
+    \item Algoritmos recursivos.
+    \item Construcción computacional de fractales.
+\end{itemize}
+
+\textbf{Actividad principal:}
+
+Construcción del Triángulo de Sierpinski mediante una estrategia iterativa o recursiva.
+
+\textbf{Ejercicio de ampliación:}
+
+Explorar otros patrones fractales y comparar el algoritmo utilizado.
+
+% --------------------------------------------------
+
+% --------------------------------------------------
+\subsubsection*{Sesión 18: Práctica integradora}
+
+\textbf{Objetivo:}
+
+Integrar los conocimientos de programación, funciones, ciclos, arreglos y visualización.
+
+\textbf{Posibles proyectos:}
+\begin{enumerate}[noitemsep]
+    \item Simulación de caída libre.
+    \item Exploración de trayectorias de un proyectil.
+    \item Análisis de una función matemática con parámetros.
+    \item Simulación aleatoria.
+    \item Generación de un fractal.
+    \item Análisis básico de un conjunto de datos.
+\end{enumerate}
+
+\textbf{Producto de la sesión:}
+
+Un cuaderno de \colab\ organizado, comentado y funcional.
+
+%------------------------------------------------------
+\subsubsection*{Sesión 19: Segunda Evaluación}
+
+% ==================================================
+\subsection{Bloque III. Introducción a Linux y GitHub}
+
+%Linux es un sistema operativo de código abierto ampliamente utilizado en entornos científicos, académicos y tecnológicos. Permite al estudiante familiarizarse con la gestión de archivos, la ejecución de programas y el trabajo mediante la terminal o línea de comandos. Una introducción básica a Linux resulta útil para desarrollar autonomía en el uso de herramientas computacionales y comprender mejor los entornos en los que se desarrollan y ejecutan programas científicos.
+
+%La incorporación de \github\ permite introducir a los estudiantes en prácticas básicas de organización y reproducibilidad computacional.
+%El objetivo no es convertir al estudiante en un usuario avanzado de control de versiones, sino proporcionar herramientas elementales para guardar, documentar y recuperar diferentes versiones de un proyecto.
+
+% --------------------------------------------------
+\subsubsection*{Sesión 20. ¿Qué es Linux y qué es GitHub?}
+
+\textbf{Temática:}
+\begin{itemize}[noitemsep]
+\item ¿Qué es Linux y qué es un sistema operativo?
+\item Distribuciones de Linux y relación con otros sistemas operativos.
+\item Estructura básica del sistema de archivos.
+\item Introducción a la terminal y la línea de comandos.
+\item Navegación entre directorios.
+\item Comandos básicos: pwd, ls, cd, mkdir, cp y rm.
+
+    \item Problemas de trabajar con archivos como:
+    \texttt{proyecto\_final.py},
+    \texttt{proyecto\_final\_ahora\_si.py},
+    \texttt{proyecto\_final\_ultimo.py}.
+     \item Repositorios.
+    \item Archivos y carpetas.
+    \item README.
+\end{itemize}
+
+\textbf{Actividad práctica Linux:}
+\begin{itemize}
+\item Exploración del sistema: utilizar los comandos pwd, ls y cd para identificar la ubicación actual, listar los archivos y navegar entre diferentes directorios.
+\item Organización de archivos: crear mediante la terminal una carpeta llamada curso\python, y dentro de ella las subcarpetas ejercicios, proyectos y datos.
+\item Gestión básica de archivos: crear un archivo de texto, copiarlo a otra carpeta, cambiarle el nombre y finalmente eliminar una copia utilizando comandos de la terminal.
+\item Mostrar una situación en la que existen varias versiones de un mismo archivo y discutir las dificultades para identificar cuál contiene la
+versión correcta.
+\end{itemize}
+
+\textbf{Actividad práctica Github:}
+\begin{enumerate}[noitemsep]
+    \item Crear una cuenta en \github.
+    \item Crear un primer repositorio.
+    \item Agregar un archivo \texttt{README.md}.
+    \item Describir brevemente un proyecto.
+    \item Subir un archivo de \python.
+\end{enumerate}
+
+\textbf{Ejercicio:}
+
+Cada estudiante crea un repositorio llamado, por ejemplo, \texttt{taller-herramientas-computacionales} y organiza una estructura
+inicial:
+
+\begin{verbatim}
+taller-herramientas-computacionales/
+|
+|-- README.md
+|-- python/
+|-- ejercicios/
+|-- proyecto/
+|-- documentos/
+\end{verbatim}
+
+% ==================================================
+\subsection{Bloque IV. Introducción a LaTeX y comunicación científica}
+
+% --------------------------------------------------
+\subsubsection*{Sesión 1. Introducción a LaTeX y Overleaf. Estructura de un documento.}
+
+\textbf{Temática:}
+\begin{itemize}[noitemsep]
+    \item ¿Qué es \latexname?
+    \item Diferencia entre editor visual y sistema de composición. 
+    \item Uso inicial de \overleaf. 
+    \item Estructura básica de un documento.
+    \item Secciones y subsecciones.
+    \item Párrafos.
+    \item Énfasis tipográfico.
+    \item Paquetes.
+    \item Comentarios.
+    \item Compilación.
+\end{itemize}
+
+\textbf{Ejercicio:}
+
+Modificar una plantilla sencilla que contenga:
+
+\begin{itemize}[noitemsep]
+    \item Título.
+    \item Autor.
+    \item Fecha.
+    \item Secciones.
+    \item Texto.
+\end{itemize}
+%--------------------------------------------------
+\subsubsection*{Sesión 2. Listas, tablas y organización de resultados}
+
+\textbf{Temática:}
+\begin{itemize}[noitemsep]
+    \item Listas numeradas.
+    \item Listas con viñetas.
+    \item Tablas.
+    \item Alineación de datos.
+    \item Uso de tablas para resultados.
+\end{itemize}
+
+\textbf{Actividad práctica:}
+
+Construir una tabla de datos generados previamente en \python\ y presentarla correctamente en un documento.
+
+% --------------------------------------------------
+\subsubsection*{Sesión 3. Figuras, gráficas y referencias cruzadas}
+
+\textbf{Temática:}
+\begin{itemize}[noitemsep]
+    \item Inclusión de figuras.
+    \item Tamaño y posición.
+    \item Leyendas.
+    \item Etiquetas.
+    \item Referencias cruzadas.
+\end{itemize}
+
+\textbf{Actividad integradora:}
+
+Generar una gráfica en \python, guardarla como imagen e incluirla en un
+documento de \latexname.
+
+El estudiante deberá explicar:
+
+\begin{enumerate}
+    \item Qué representa la gráfica.
+    \item Qué variables se presentan.
+    \item Qué comportamiento se observa.
+\end{enumerate}
+% --------------------------------------------------
+\subsubsection*{Sesión 4. Escritura de expresiones matemáticas}
+
+\textbf{Temática:}
+\begin{itemize} [noitemsep]
+    \item Modo matemático.
+    \item Superíndices y subíndices.
+    \item Fracciones.
+    \item Raíces.
+    \item Ecuaciones.
+    \item Símbolos matemáticos.
+\end{itemize}
+
+\textbf{Ejercicios:}
+
+Escribir en \latexname:
+
+\begin{equation}
+v = \frac{\Delta x}{\Delta t}
+\end{equation}
+
+\begin{equation}
+x(t)=x_0+v_0t+\frac{1}{2}at^2
+\end{equation}
+
+\begin{equation}
+\int_a^b f(x)\,dx
+\end{equation}
+
+% --------------------------------------------------
+\subsubsection*{Sesión 5. Teoremas, Corolarios, demostraciones, etc.}
+% --------------------------------------------------
+\subsubsection*{Sesión 6. Referencias bibliográficas y citas}
+
+\textbf{Temática:}
+\begin{itemize}[noitemsep]
+    \item Importancia de citar fuentes.
+    \item Referencias bibliográficas.
+    \item Archivos \texttt{.bib}.
+    \item Citas dentro del texto.
+    \item Introducción a BibTeX y Biber.
+\end{itemize}
+
+\textbf{Actividad práctica:}
+
+Crear una pequeña base bibliográfica con tres referencias y citarlas
+dentro de un documento.
+
+% --------------------------------------------------
+\subsubsection*{Sesión 7. Presentacion Beamer}
+
+\textbf{Temática:}
+\begin{itemize}[noitemsep]
+    \item Introducción a presentaciones con Beamer.
+    \item Estructura de una presentación científica.
+    \item Integración de código, resultados y documentación.
+\end{itemize}
+
+\textbf{Actividad final:}
+
+Presentar un proyecto breve que integre:
+
+\begin{enumerate}[noitemsep]
+    \item Un problema matemático o científico.
+    \item Código desarrollado en \python.
+    \item Una o más representaciones gráficas.
+    \item Un repositorio organizado en \github.
+    \item Un reporte escrito en \latexname.
+    \item Una presentación breve.
+\end{enumerate}
+
+% ==================================================
+\section{Propuesta de ejercicios integradores}
+{\textcolor{red}{Falta proponer}}
+% =------------------------------------------------
+
+\section{Proyecto final}
+
+El proyecto final consiste en realizar una breve investigación sobre un tema de interés relacionado con las matemáticas aplicadas a cualquier área de estudio (ciencias, ingeniería, economía, ciencias sociales, entre otras). El trabajo deberá incluir una propuesta de análisis, modelo o solución en la que se utilicen herramientas de programación —como \textbf{Python}— para el procesamiento, simulación o visualización de resultados. El proyecto deberá documentarse en un \textbf{informe elaborado en LaTeX} y exponerse ante el grupo mediante \textbf{Beamer}.\\
+
+El proyecto deberá permitir identificar claramente:
+
+\begin{itemize}[noitemsep]
+    \item Qué problema se estudia.
+    \item Qué modelo matemático se utiliza.
+    \item Cómo se ejecuta el programa.
+    \item Qué resultados se obtienen.
+    \item Cómo se interpretan dichos resultados.
+    \item Qué fuentes bibliográficas se utilizaron.
+\end{itemize}
+
+
+\textbf{Como mínimo deberá contener:}
+
+\begin{enumerate}[noitemsep]
+    \item Planteamiento del problema.
+    \item Objetivos del proyecto.
+    \item Fundamento teórico
+    \item Modelo matemático.
+    \item Código comentado.
+    \item Resultados numéricos o gráficos.
+    \item Análisis de resultados.
+    \item  Conclusiones, opiniones finales o estado del arte.
+    \item Referencias y citas
+    \item Repositorio de \github.
+    \item Documento técnico elaborado en \latexname.
+    \item Presentación breve en Beamer y oral.
+\end{enumerate}
+
+% ==================================================
+% ==================================================
+\subsection{Producto final esperado y entregables}
+
+Al finalizar el curso, cada estudiante deberá entregar su proyecto computacional organizado de manera similar a:
+
+\begin{verbatim}
+proyecto-final/
+|
+|-- README.md
+|
+|-- codigo/
+|   |-- programa_principal.py
+|   |-- funciones.py
+|
+|-- datos/
+|
+|-- figuras/
+|
+|-- documento/
+|   |-- reporte.tex
+|   |-- referencias.bib
+|
+|-- presentacion/
+    |-- presentacion.tex
+\end{verbatim}
+
+
+Informe con la estructura: 
+\begin{itemize}[noitemsep]
+    \item Introducción
+        \item Fundamentos teóricos 
+        \item Metodología 
+        \item Resultados
+        \item Conclusiones
+        \item Bibliografía.
+         \item Anexo: Código Python \textbf{(.ipynb y .pdf)} funcional y documentado.
+    \end{itemize}
+    
+El código es de cualquier cosa realizada con python expuesta en su proyecto: Gráficos, resolución de ecuaciones, etc.\\
+
+
+ \textbf{Presentación Beamer (.pdf y .tex)}\vspace{-2ex}
+    \begin{itemize}[noitemsep]
+        \item Información sintetizada del informe técnico: Introducción, objetivos, resultados y su análisis, conclusiones y referencias.
+        \item Recursos visuales: gráficos, fórmulas, etc. 
+        \item Extensión de entre 8 y 12 diapositivas.
+    \end{itemize}
+    
+\textbf{Exposición oral}\vspace{-2ex}
+
+\begin{itemize}[noitemsep]
+\item Duración: máximo 10 minutos.
+\item Extensión: entre 8 y 12 diapositivas.
+
+Evaluación: se considerará claridad, manejo del tiempo y conocimiento del tema.
+\end{itemize}
+% ==================================================
+
+\section{Consideraciones didácticas finales}
+
+Dado que se trata de estudiantes de primer semestre, se recomienda
+evitar que el curso se convierta únicamente en una enseñanza de sintaxis.
+Cada concepto de programación debe asociarse con un problema que el
+estudiante pueda comprender, modificar y explorar.
+
+Se propone la siguiente progresión pedagógica:
+
+\begin{enumerate}[noitemsep]
+    \item \textbf{Primero:} observar un ejemplo.
+    \item \textbf{Después:} modificarlo.
+    \item \textbf{Posteriormente:} reconstruirlo con ayuda.
+    \item \textbf{Finalmente:} resolver un problema nuevo de manera
+    autónoma.
+\end{enumerate}
+
+Asimismo, se recomienda mantener una conexión constante entre los
+diferentes entornos de trabajo:
+
+\begin{center}
+\textbf{Explorar $\rightarrow$ Programar $\rightarrow$ Organizar
+$\rightarrow$ Documentar $\rightarrow$ Comunicar}
+\end{center}
+
+De esta manera, \colab\ puede utilizarse principalmente durante las
+primeras etapas de exploración y aprendizaje; \vscode\ para el
+desarrollo progresivo de programas y proyectos; \github\ para la
+organización y versionado del trabajo; y \overleaf\ para la elaboración
+de reportes y presentaciones.\\[3ex]
+
+
+% ==================================================
+\section{Recursos de consulta recomendados}
+
+Para el desarrollo del curso se recomienda utilizar la documentación
+oficial y los recursos educativos correspondientes a:
+
+\begin{itemize}
+    \item Python Software Foundation: documentación oficial de Python.
+    \item Project Jupyter y Google Colaboratory: documentación sobre
+    cuadernos computacionales.
+    \item NumPy: documentación oficial para computación numérica.
+    \item SymPy: documentación oficial para cálculo simbólico.
+    \item Matplotlib: documentación oficial para visualización.
+    \item Git: documentación y libro \textit{Pro Git}.
+    \item GitHub Docs: documentación sobre repositorios y control de
+    versiones.
+    \item Overleaf Learn: recursos para aprender \latexname.
+    \item Comprehensive TeX Archive Network (CTAN): documentación y
+    paquetes de \latexname.
+\end{itemize}
+
+% ==================================================
+
+
+\end{document}
