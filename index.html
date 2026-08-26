@@ -291,6 +291,10 @@ footer{max-width:860px;margin:0 auto;padding:40px 24px 60px;text-align:center;fo
 // track: "py" | "tex" | "hito" · num: etiqueta de sesión · date: fecha según calendario
 // bridge: puente que se dibuja ANTES de la tarjeta (solo visible con el filtro "Todas")
 const ITEMS = [
+ {track:"py",num:1,date:"1 sep",title:"Presentación del curso y evaluación diagnóstica",subs:[
+  "Presentación de la asignatura",
+  "Cuestionario de conocimientos generales",
+  "Objetivo: conocer el estado de conocimiento sobre programación del grupo"]},
  {track:"tex",num:1,date:"3 sep",title:"Introducción a LaTeX y Overleaf. Estructura de un documento",subs:[
   "Qué es LaTeX; diferencia entre editor visual y sistema de composición",
   "Uso inicial de Overleaf",
@@ -298,10 +302,6 @@ const ITEMS = [
   "Párrafos y énfasis tipográfico",
   "Paquetes, comentarios y compilación",
   "Ejercicio: modificar una plantilla sencilla con título, autor, fecha, secciones y texto"]},
- {track:"py",num:1,date:"8 sep",title:"Presentación del curso y evaluación diagnóstica",subs:[
-  "Presentación de la asignatura",
-  "Cuestionario de conocimientos generales",
-  "Objetivo: conocer el estado de conocimiento sobre programación del grupo"]},
  {track:"tex",num:2,date:"10 sep",title:"Listas, tablas y organización de resultados",
   bridge:"tablas ⟷ datos: la tabla en LaTeX presenta datos generados previamente en Python",subs:[
   "Listas numeradas y listas con viñetas",
