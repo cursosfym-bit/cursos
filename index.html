@@ -249,9 +249,9 @@ footer{max-width:860px;margin:0 auto;padding:40px 24px 60px;text-align:center;fo
   <div class="controls-inner">
     <div class="filters" role="group" aria-label="Filtrar sesiones">
       <button class="chip" data-filter="all" aria-pressed="true">Todas · 28</button>
-      <button class="chip f-py" data-filter="py" aria-pressed="false">Python · 15</button>
+      <button class="chip f-py" data-filter="py" aria-pressed="false">Python · 14</button>
       <button class="chip f-tex" data-filter="tex" aria-pressed="false">LaTeX · 7</button>
-      <button class="chip f-hito" data-filter="hito" aria-pressed="false">Hitos · 6</button>
+      <button class="chip f-hito" data-filter="hito" aria-pressed="false">Hitos · 7</button>
     </div>
     <div class="right-tools">
       <span class="progress"><b id="doneCount">0</b>/28 vistas</span>
@@ -291,7 +291,7 @@ footer{max-width:860px;margin:0 auto;padding:40px 24px 60px;text-align:center;fo
 // track: "py" | "tex" | "hito" · num: etiqueta de sesión · date: fecha según calendario
 // bridge: puente que se dibuja ANTES de la tarjeta (solo visible con el filtro "Todas")
 const ITEMS = [
- {track:"py",num:0,date:"1 sep",title:"Presentación del curso y evaluación diagnóstica",subs:[
+ {track:"hito",num:0,date:"1 sep",title:"Presentación del curso y evaluación diagnóstica",subs:[
   "Presentación de la asignatura",
   "Cuestionario de conocimientos generales",
   "Objetivo: conocer el estado de conocimiento sobre programación del grupo"]},
@@ -315,7 +315,7 @@ const ITEMS = [
   "Referencias cruzadas",
   "Actividad integradora: generar una gráfica en <code>Python</code>, guardarla como imagen e incluirla en el documento",
   "Explicar qué representa la gráfica, qué variables se presentan y qué comportamiento se observa"]},
- {track:"py",num:2,date:"17 sep",title:"Pensamiento computacional y primer contacto con Python. Variables y tipos de datos",subs:[
+ {track:"py",num:1,date:"17 sep",title:"Pensamiento computacional y primer contacto con Python. Variables y tipos de datos",subs:[
   "¿Qué es un algoritmo? ¿Qué es un lenguaje de programación?",
   "Primer contacto con Python mediante <code>Google Colab</code>",
   "Variables, números enteros y reales, cadenas de texto",
@@ -326,7 +326,7 @@ const ITEMS = [
   "Fracciones y raíces",
   "Ecuaciones y símbolos matemáticos",
   "Ejercicios: <code>v=\\frac{\\Delta x}{\\Delta t}</code>, &nbsp;<code>x(t)=x_0+v_0t+\\frac{1}{2}at^2</code>, &nbsp;<code>\\int_a^b f(x)\\,dx</code>"]},
- {track:"py",num:3,date:"24 sep",title:"Entrada y salida de información",subs:[
+ {track:"py",num:2,date:"24 sep",title:"Entrada y salida de información",subs:[
   "Función <code>input()</code> y conversión de tipos",
   "Salida de información y formato de resultados",
   "Ejercicios: índice de masa corporal, conversor de unidades, promedio de tres calificaciones, movimiento rectilíneo uniforme"]},
@@ -334,7 +334,7 @@ const ITEMS = [
   "Entornos para teoremas, corolarios, lemas y definiciones",
   "Escritura y numeración de demostraciones",
   "Referencia de resultados dentro del documento"]},
- {track:"py",num:4,date:"1 oct",title:"Funciones básicas y estructuras condicionales",subs:[
+ {track:"py",num:3,date:"1 oct",title:"Funciones básicas y estructuras condicionales",subs:[
   "Funciones matemáticas e importación de módulos",
   "Funciones definidas por el usuario; parámetros y valores de retorno",
   "Expresiones booleanas y operadores relacionales",
@@ -345,12 +345,12 @@ const ITEMS = [
   "Archivos <code>.bib</code> y citas dentro del texto",
   "Introducción a BibTeX y Biber",
   "Práctica: base bibliográfica con tres referencias citadas en un documento"]},
- {track:"py",num:5,date:"8 oct",title:"Ciclos: repetición controlada",subs:[
+ {track:"py",num:4,date:"8 oct",title:"Ciclos: repetición controlada",subs:[
   "Concepto de iteración; ciclo <code>for</code> y función <code>range()</code>",
   "Ciclo <code>while</code>; variables acumuladoras y contadores",
   "Condicionales dentro de ciclos; diseño de algoritmos",
   "Ejercicios: números del 1 al 100, suma de los primeros n, tabla de multiplicar, aproximar una serie, análisis de calificaciones"]},
- {track:"py",num:6,date:"13 oct",title:"Listas y manejo básico de colecciones de datos",subs:[
+ {track:"py",num:5,date:"13 oct",title:"Listas y manejo básico de colecciones de datos",subs:[
   "Listas e índices",
   "Acceso, modificación y recorrido de listas",
   "Ejercicios: máximo y mínimo, promedio, conteo con condición, lista de cuadrados"]},
@@ -361,7 +361,7 @@ const ITEMS = [
   bridge:"evaluación conjunta: fundamentos de programación + primer texto en LaTeX — las dos pistas se evalúan juntas",subs:[
   "Fundamentos de programación",
   "Fundamentos de LaTeX: primer texto"]},
- {track:"py",num:9,date:"22 oct",title:"Arreglos numéricos con NumPy y operaciones vectorizadas",subs:[
+ {track:"py",num:6,date:"22 oct",title:"Arreglos numéricos con NumPy y operaciones vectorizadas",subs:[
   "Introducción a <code>NumPy</code>; arreglos unidimensionales",
   "Operaciones vectorizadas y generación de secuencias numéricas",
   "Ejercicios: posición en movimiento rectilíneo uniforme, caída libre ideal, aceleración constante"]},
@@ -371,40 +371,40 @@ const ITEMS = [
   "Estructura de una presentación científica",
   "Integración de código, resultados y documentación",
   "Actividad: presentar un proyecto breve con problema, código en Python, gráficas, repositorio y reporte"]},
- {track:"py",num:10,date:"29 oct",title:"Matrices y arreglos bidimensionales",subs:[
+ {track:"py",num:7,date:"29 oct",title:"Matrices y arreglos bidimensionales",subs:[
   "Matrices, dimensiones e índices",
   "Operaciones básicas y producto matricial",
   "Ejercicios: crear matrices, suma, producto por escalar, explorar una transformación lineal sencilla"]},
- {track:"py",num:11,date:"3 nov",title:"Recursión, modularidad y reutilización",subs:[
+ {track:"py",num:8,date:"3 nov",title:"Recursión, modularidad y reutilización",subs:[
   "Concepto de recursión: caso base y llamada recursiva",
   "Factorial, sucesión de Fibonacci, suma de los primeros n enteros",
   "Comparar una solución iterativa con una recursiva",
   "Diseño de funciones y biblioteca reutilizable: conversión de unidades, áreas, estadística sencilla"]},
- {track:"py",num:12,date:"5 nov",title:"Cálculo simbólico con SymPy",
+ {track:"py",num:9,date:"5 nov",title:"Cálculo simbólico con SymPy",
   bridge:"cálculo simbólico ⟷ modo matemático: sympy.latex(expr) traduce las expresiones al LaTeX de la sesión 4",subs:[
   "Introducción a <code>SymPy</code>; variables simbólicas",
   "Simplificación, derivación e integración",
   "Resolución de ecuaciones sencillas",
   "Ejercicio: resolver simbólicamente y verificar numéricamente problemas elementales de cálculo"]},
- {track:"py",num:13,date:"10 nov",title:"Resolución numérica y gráfica: raíces y ecuaciones",subs:[
+ {track:"py",num:10,date:"10 nov",title:"Resolución numérica y gráfica: raíces y ecuaciones",subs:[
   "Interpretación gráfica de una raíz",
   "Raíces de polinomios y métodos numéricos sencillos",
   "Comparación entre resultados simbólicos y numéricos",
   "Ejercicios: polinomio cuadrático, grados mayores, graficar la función e identificar sus ceros"]},
- {track:"py",num:14,date:"12 nov",title:"Graficación y visualización con Matplotlib",subs:[
+ {track:"py",num:11,date:"12 nov",title:"Graficación y visualización con Matplotlib",subs:[
   "Introducción a <code>Matplotlib</code>",
   "Gráficas de funciones; ejes, etiquetas y leyendas",
   "Práctica: representar funciones y analizar cómo cambian al modificar parámetros"]},
- {track:"py",num:15,date:"17 nov",title:"Errores numéricos, precisión y redondeo",subs:[
+ {track:"py",num:12,date:"17 nov",title:"Errores numéricos, precisión y redondeo",subs:[
   "Precisión finita; error absoluto y error relativo",
   "Propagación básica de errores; problemas asociados al redondeo",
   "Ejercicios: aproximaciones de π, representaciones numéricas, expresiones matemáticamente equivalentes"]},
- {track:"py",num:16,date:"19 nov",title:"Números aleatorios y simulación",subs:[
+ {track:"py",num:13,date:"19 nov",title:"Números aleatorios y simulación",subs:[
   "Generación de números aleatorios",
   "Distribuciones básicas",
   "Simulación computacional",
   "Ejercicio: estimación de una cantidad mediante simulación de Monte Carlo sencilla"]},
- {track:"py",num:17,date:"24 nov",title:"Transformaciones geométricas y fractales (temas comodín)",subs:[
+ {track:"py",num:14,date:"24 nov",title:"Transformaciones geométricas y fractales (temas comodín)",subs:[
   "Vectores en el plano; transformaciones lineales: escalamiento, rotación, reflexión",
   "Coordenadas tridimensionales y superficies: paraboloide, esfera",
   "Autosimilitud y algoritmos recursivos",
